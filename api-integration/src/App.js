@@ -1,15 +1,16 @@
 import './App.css';
 import axios from 'axios';
 import { useState, useEffect } from 'react';
+import DrinksContainer from './Containers/DrinksContainer';
+
 
 function App() {
 
   useEffect(() => {
-		// Trigger the API Call
 		fetchDrinks();
 	}, []);  
 
-const [response, setResponse] = useState(null);
+const [drinks, setDrinks] = useState([]);
 
 const fetchDrinks = async () => {
 	try {
@@ -20,19 +21,17 @@ const fetchDrinks = async () => {
 				params: {},
 			}
 		);
-    setResponse(res.data.drinks)
+    setDrinks(res.data.drinks)
 	} catch (err) {
 		console.log(err);
 	}
 };
 
 
-
-
   return (
   <div>
     <div>yup</div>
-    {/* <button onClick={() => fetchDrinks()}>cocktails click me</button> */}
+    <DrinksContainer drinks={drinks}/>
   </div>
   );
 }
