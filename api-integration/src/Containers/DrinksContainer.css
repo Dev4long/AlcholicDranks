@@ -1,4 +1,9 @@
 .container{
     border: 5px solid red;
-    padding: 25px;
+    padding: 3em;
+    display: grid;
+    grid-gap: 2em;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    
+   
 }

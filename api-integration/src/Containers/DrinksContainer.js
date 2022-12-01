@@ -4,9 +4,10 @@ import "./DrinksContainer.css"
 
 function DrinksContainer({drinks}) {
   return (
+    <div>
     <div className="container">
-    <h1 style={{textAlign: 'center'}}>My Favorite drinks</h1>
     {drinks.map(drink => {return <DrinkCard drink={drink} key={drink.idDrink}/>})}
+    </div>
     </div>
   )
 }
