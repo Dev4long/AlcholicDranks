@@ -31,6 +31,7 @@ const fetchDrinks = async () => {
   return (
   <div>
     <div>yup</div>
+	What am i gonna have to do to get a job in tech 
     <DrinksContainer drinks={drinks}/>
   </div>
   );
